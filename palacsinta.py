@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def palacsinta():
-  subprocess.Popen(["omxplayer", f"sounds/{random.randint(1,3)}.mp3"])
+  subprocess.Popen(["afplay", "sounds/%s.mp3" % random.randint(1,3)])
   return "Csintalan palacsinta!"
 
 if __name__ == '__main__':
